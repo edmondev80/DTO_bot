@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  bot:
+    build: .
+    container_name: telegram-bot
+    restart: always
+    environment:
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - ALLOWED_USERS=${ALLOWED_USERS}
+      - HASH_SALT=${HASH_SALT}
+    volumes:
+      - ./data:/app/data  # Для хранения данных
