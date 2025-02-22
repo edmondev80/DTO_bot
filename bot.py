@@ -384,7 +384,7 @@ async def check_inactivity(context: ContextTypes.DEFAULT_TYPE):
                 try:
                     await context.bot.send_message(
                         chat_id=user_id,
-                        text="Вы автоматически вышли из бота из-за неактивности. Для повторной авторизации используйте команду /start."
+                        text="Вы сейчас автоматически вышли из бота из-за неактивности. Для повторной авторизации используйте команду /start."
                     )
                 except Exception as e:
                     logger.error(f"Не удалось отправить сообщение пользователю {user_id}: {e}")
